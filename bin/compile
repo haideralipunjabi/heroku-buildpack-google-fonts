@@ -1,0 +1,71 @@
+#!/bin/sh
+# bin/compile <build-dir> <cache-dir>
+
+set -e
+
+BUILD_DIR=$1
+MAGICK_DIR=$BUILD_DIR/.magick
+BIN_DIR=$(cd "$(dirname "$0")"; pwd)
+ROOT_DIR=$(dirname "$BIN_DIR")
+FONTS_TARBALL="${ROOT_DIR}/fonts.tar.gz"
+
+system_sed() {
+  case $(uname) in
+    Darwin)
+      sed -l "$1";;
+    *)
+      sed -u "$1";;
+  esac
+}
+
+arrow() {
+  system_sed 's/^/-----> /'
+}
+
+indent() {
+  system_sed 's/^/       /'
+}
+
+install_fonts() {
+  echo "Fetching font files" | indent
+  mkdir -p $MAGICK_DIR
+  tar -zxvf $FONTS_TARBALL -C $MAGICK_DIR
+}
+
+create_config() {
+  echo "Writing ImageMagick type file" | indent
+  cat > $MAGICK_DIR/type.xml <<EOF
+<?xml version="1.0"?>
+<typemap>
+  <type format="ttf" name="AnonymousPro" fullname="Anonymous Pro Regular" family="Anonymous Pro" weight="400" style="normal" stretch="normal" glyphs="AnonymousPro-Regular.ttf" />
+  <type format="ttf" name="AnonymousProB" fullname="Anonymous Pro Bold" family="Anonymous Pro" weight="700" style="normal" stretch="normal" glyphs="AnonymousPro-Bold.ttf" />
+  <type format="ttf" name="AnonymousProBI" fullname="Anonymous Pro Bold Italic" family="Anonymous Pro" weight="700" style="italic" stretch="normal" glyphs="AnonymousPro-BoldItalic.ttf" />
+  <type format="ttf" name="AnonymousProI" fullname="Anonymous Pro Italic" family="Anonymous Pro" weight="400" style="normal" stretch="normal" glyphs="AnonymousPro-Italic.ttf" />
+  <type format="ttf" name="Arimo" fullname="Arimo Regular" family="Arimo" weight="400" style="normal" stretch="normal" glyphs="Arimo-Regular.ttf" />
+  <type format="ttf" name="ArimoB" fullname="Arimo Bold" family="Arimo" weight="700" style="normal" stretch="normal" glyphs="Arimo-Bold.ttf" />
+  <type format="ttf" name="ArimoBI" fullname="Arimo Bold Italic" family="Arimo" weight="700" style="italic" stretch="normal" glyphs="Arimo-BoldItalic.ttf" />
+  <type format="ttf" name="ArimoI" fullname="Arimo Italic" family="Arimo" weight="400" style="italic" stretch="normal" glyphs="Arimo-Italic.ttf" />
+  <type format="ttf" name="NotoSans" fullname="Noto Sans" family="Noto Sans" weight="400" style="normal" stretch="normal" glyphs="NotoSans-Regular.ttf" />
+  <type format="ttf" name="NotoSansB" fullname="Noto Sans Bold" family="Noto Sans" weight="700" style="normal" stretch="normal" glyphs="NotoSans-Bold.ttf" />
+  <type format="ttf" name="NotoSansBI" fullname="Noto Sans Bold Italic" family="Noto Sans" weight="700" style="italic" stretch="normal" glyphs="NotoSans-BoldItalic.ttf" />
+  <type format="ttf" name="NotoSansI" fullname="Noto Sans Italic" family="Noto Sans" weight="400" style="italic" stretch="normal" glyphs="NotoSans-Italic.ttf" />
+  <type format="ttf" name="Roboto" fullname="Roboto" family="Roboto" weight="400" style="normal" stretch="normal" glyphs="Roboto-Regular.ttf" />
+  <type format="ttf" name="RobotoB" fullname="Roboto Bold" family="Roboto" weight="700" style="normal" stretch="normal" glyphs="Roboto-Bold.ttf" />
+  <type format="ttf" name="RobotoBI" fullname="Roboto Bold Italic" family="Roboto" weight="700" style="italic" stretch="normal" glyphs="Roboto-BoldItalic.ttf" />
+  <type format="ttf" name="RobotoI" fullname="Roboto Italic" family="Roboto" weight="400" style="italic" stretch="normal" glyphs="Roboto-Italic.ttf" />
+  <type format="ttf" name="SourceSerifPro" fullname="Source Serif Pro" family="Source Serif Pro" weight="400" style="normal" stretch="normal" glyphs="SourceSerifPro-Regular.ttf" />
+  <type format="ttf" name="SourceSerifProB" fullname="Source Serif Pro Bold" family="Source Serif Pro" weight="700" style="normal" stretch="normal" glyphs="SourceSerifPro-Bold.ttf" />
+  <type format="ttf" name="SourceSerifProBI" fullname="Source Serif Pro Bold Italic" family="Source Serif Pro" weight="700" style="italic" stretch="normal" glyphs="SourceSerifPro-BoldItalic.ttf" />
+  <type format="ttf" name="SourceSerifProI" fullname="Source Serif Pro Italic" family="Source Serif Pro" weight="400" style="italic" stretch="normal" glyphs="SourceSerifPro-Italic.ttf" />
+</typemap>
+EOF
+}
+
+echo "Installing google fonts" | arrow
+if [ -f $MAGICK_DIR/type.xml ]; then
+  echo "Skipping as .magick/type.xml already exists" | arrow
+else
+  install_fonts
+  create_config
+  echo "Done!" | indent
+fi

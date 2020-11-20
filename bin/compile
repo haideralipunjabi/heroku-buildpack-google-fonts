@@ -45,10 +45,34 @@ create_config() {
   <type format="ttf" name="ArimoB" fullname="Arimo Bold" family="Arimo" weight="700" style="normal" stretch="normal" glyphs="Arimo-Bold.ttf" />
   <type format="ttf" name="ArimoBI" fullname="Arimo Bold Italic" family="Arimo" weight="700" style="italic" stretch="normal" glyphs="Arimo-BoldItalic.ttf" />
   <type format="ttf" name="ArimoI" fullname="Arimo Italic" family="Arimo" weight="400" style="italic" stretch="normal" glyphs="Arimo-Italic.ttf" />
+  <type format="ttf" name="BaiJamjuree" fullname="Bai Jamjuree Regular" family="Bai Jamjuree" weight="400" style="normal" stretch="normal" glyphs="BaiJamjuree-Regular.ttf" />
+  <type format="ttf" name="BaiJamjureeB" fullname="Bai Jamjuree Bold" family="Bai Jamjuree" weight="700" style="normal" stretch="normal" glyphs="BaiJamjuree-Bold.ttf" />
+  <type format="ttf" name="BaiJamjureeBI" fullname="Bai Jamjuree Bold Italic" family="Bai Jamjuree" weight="700" style="italic" stretch="normal" glyphs="BaiJamjuree-BoldItalic.ttf" />
+  <type format="ttf" name="BaiJamjureeI" fullname="Bai Jamjuree Italic" family="Bai Jamjuree" weight="400" style="italic" stretch="normal" glyphs="BaiJamjuree-Italic.ttf" />
+  <type format="ttf" name="BarlowC" fullname="Barlow Condensed Regular" family="Barlow Condensed" weight="400" style="normal" stretch="normal" glyphs="BarlowCondensed-Regular.ttf" />
+  <type format="ttf" name="BarlowCB" fullname="Barlow Condensed Bold" family="Barlow Condensed" weight="700" style="normal" stretch="normal" glyphs="BarlowCondensed-Bold.ttf" />
+  <type format="ttf" name="BarlowCBI" fullname="Barlow Condensed Bold Italic" family="Barlow Condensed" weight="700" style="italic" stretch="normal" glyphs="BarlowCondensed-BoldItalic.ttf" />
+  <type format="ttf" name="BarlowCI" fullname="Barlow Condensed Italic" family="Barlow Condensed" weight="400" style="italic" stretch="normal" glyphs="BarlowCondensed-Italic.ttf" />
+  <type format="ttf" name="EBGaramond" fullname="EB Garamond Regular" family="EB Garamond" weight="400" style="normal" stretch="normal" glyphs="EBGaramond-Regular.ttf" />
+  <type format="ttf" name="EBGaramondB" fullname="EB Garamond Bold" family="EB Garamond" weight="700" style="normal" stretch="normal" glyphs="EBGaramond-Bold.ttf" />
+  <type format="ttf" name="EBGaramondBI" fullname="EB Garamond Bold Italic" family="EB Garamond" weight="700" style="italic" stretch="normal" glyphs="EBGaramond-BoldItalic.ttf" />
+  <type format="ttf" name="EBGaramondI" fullname="EB Garamond Italic" family="EB Garamond" weight="400" style="italic" stretch="normal" glyphs="EBGaramond-Italic.ttf" />
+  <type format="ttf" name="Lato" fullname="Lato Regular" family="Lato" weight="400" style="normal" stretch="normal" glyphs="Lato-Regular.ttf" />
+  <type format="ttf" name="LatoB" fullname="Lato Bold" family="Lato" weight="700" style="normal" stretch="normal" glyphs="Lato-Bold.ttf" />
+  <type format="ttf" name="LatoBI" fullname="Lato Bold Italic" family="Lato" weight="700" style="italic" stretch="normal" glyphs="Lato-BoldItalic.ttf" />
+  <type format="ttf" name="LatoI" fullname="Lato Italic" family="Lato" weight="400" style="italic" stretch="normal" glyphs="Lato-Italic.ttf" />
+  <type format="ttf" name="Montserrat" fullname="Montserrat Regular" family="Montserrat" weight="400" style="normal" stretch="normal" glyphs="Montserrat-Regular.ttf" />
+  <type format="ttf" name="MontserratB" fullname="Montserrat Bold" family="Montserrat" weight="700" style="normal" stretch="normal" glyphs="Montserrat-Bold.ttf" />
+  <type format="ttf" name="MontserratBI" fullname="Montserrat Bold Italic" family="Montserrat" weight="700" style="italic" stretch="normal" glyphs="Montserrat-BoldItalic.ttf" />
+  <type format="ttf" name="MontserratI" fullname="Montserrat Italic" family="Montserrat" weight="400" style="italic" stretch="normal" glyphs="Montserrat-Italic.ttf" />
   <type format="ttf" name="NotoSans" fullname="Noto Sans" family="Noto Sans" weight="400" style="normal" stretch="normal" glyphs="NotoSans-Regular.ttf" />
   <type format="ttf" name="NotoSansB" fullname="Noto Sans Bold" family="Noto Sans" weight="700" style="normal" stretch="normal" glyphs="NotoSans-Bold.ttf" />
   <type format="ttf" name="NotoSansBI" fullname="Noto Sans Bold Italic" family="Noto Sans" weight="700" style="italic" stretch="normal" glyphs="NotoSans-BoldItalic.ttf" />
   <type format="ttf" name="NotoSansI" fullname="Noto Sans Italic" family="Noto Sans" weight="400" style="italic" stretch="normal" glyphs="NotoSans-Italic.ttf" />
+  <type format="ttf" name="OpenSans" fullname="Open Sans Regular" family="Open Sans" weight="400" style="normal" stretch="normal" glyphs="OpenSans-Regular.ttf" />
+  <type format="ttf" name="OpenSansB" fullname="Open Sans Bold" family="Open Sans" weight="700" style="normal" stretch="normal" glyphs="OpenSans-Bold.ttf" />
+  <type format="ttf" name="OpenSansBI" fullname="Open Sans Bold Italic" family="Open Sans" weight="700" style="italic" stretch="normal" glyphs="OpenSans-BoldItalic.ttf" />
+  <type format="ttf" name="OpenSansI" fullname="Open Sans Italic" family="Open Sans" weight="400" style="italic" stretch="normal" glyphs="OpenSans-Italic.ttf" />
   <type format="ttf" name="Roboto" fullname="Roboto" family="Roboto" weight="400" style="normal" stretch="normal" glyphs="Roboto-Regular.ttf" />
   <type format="ttf" name="RobotoB" fullname="Roboto Bold" family="Roboto" weight="700" style="normal" stretch="normal" glyphs="Roboto-Bold.ttf" />
   <type format="ttf" name="RobotoBI" fullname="Roboto Bold Italic" family="Roboto" weight="700" style="italic" stretch="normal" glyphs="Roboto-BoldItalic.ttf" />
@@ -57,6 +81,10 @@ create_config() {
   <type format="ttf" name="SourceSerifProB" fullname="Source Serif Pro Bold" family="Source Serif Pro" weight="700" style="normal" stretch="normal" glyphs="SourceSerifPro-Bold.ttf" />
   <type format="ttf" name="SourceSerifProBI" fullname="Source Serif Pro Bold Italic" family="Source Serif Pro" weight="700" style="italic" stretch="normal" glyphs="SourceSerifPro-BoldItalic.ttf" />
   <type format="ttf" name="SourceSerifProI" fullname="Source Serif Pro Italic" family="Source Serif Pro" weight="400" style="italic" stretch="normal" glyphs="SourceSerifPro-Italic.ttf" />
+  <type format="ttf" name="SpectralSC" fullname="Spectral SC Regular" family="Spectral SC" weight="400" style="normal" stretch="normal" glyphs="SpectralSC-Regular.ttf" />
+  <type format="ttf" name="SpectralSCB" fullname="Spectral SC Bold" family="Spectral SC" weight="700" style="normal" stretch="normal" glyphs="SpectralSC-Bold.ttf" />
+  <type format="ttf" name="SpectralSCBI" fullname="Spectral SC Bold Italic" family="Spectral SC" weight="700" style="italic" stretch="normal" glyphs="SpectralSC-BoldItalic.ttf" />
+  <type format="ttf" name="SpectralSCI" fullname="Spectral SC Italic" family="Spectral SC" weight="400" style="italic" stretch="normal" glyphs="SpectralSC-Italic.ttf" />
 </typemap>
 EOF
 }

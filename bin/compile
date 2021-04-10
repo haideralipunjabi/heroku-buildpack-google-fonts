@@ -95,5 +95,6 @@ if [ -f $MAGICK_DIR/type.xml ]; then
 else
   install_fonts
   create_config
+  fc-cache -fv
   echo "Done!" | indent
 fi
